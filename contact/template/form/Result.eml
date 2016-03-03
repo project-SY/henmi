@@ -1,0 +1,43 @@
+Subject: お問い合わせありがとうございました。
+From: HENMI-PRO <{print $Config/AdminEmail}>
+To: {print $Form/fullname/Value} 様 <{print $Form/email1/Value}>
+X-REMOTE_ADDR: <{print $SERVER/REMOTE_ADDR}>
+X-Class: <{print $App/Identifier}>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+件名
+{print $Form/subject/Value}
+
+
+【お問い合わせ内容】
+{print $Form/request/Value}
+
+
+【貴社名】
+{print $Form/company/Value}
+
+
+【部署名】
+{print $Form/post/Value}
+
+
+【お名前】
+{print $Form/fullname/Value}
+
+
+【フリガナ】
+{print $Form/kananame/Value}
+
+
+【電話番号】
+{print $Form/tel/Value}
+
+
+【メールアドレス】
+{print $Form/email1/Value}
+
+
+【住所】
+{print $Form/address1/Value}{print $Form/address2/Value}{print $Form/address3/Value}

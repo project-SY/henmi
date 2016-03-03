@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* !contactForm
+---------------------------------------------------------- */
+#contactForm{
+	width:470px;
+	margin:53px auto 0;
+	}
+	.errorForm{
+		color:#F00;
+		margin-bottom:43px;
+		}
+	#contactForm dl{
+		margin-bottom:40px;
+		}
+	#contactForm dl dt{
+		width:100px;
+		float:left;
+		clear:both;
+		vertical-align:top;
+/*		margin-bottom:17px;*/
+		}
+	#contactForm dl dd{
+		padding-left:178px;
+		margin-bottom:17px;
+		line-height:1.6;
+		}
+		#contactForm dl dd p{
+			margin:0;
+			}
+		#contactForm dl dd p input{
+			width:277px;
+			margin-bottom:3px;
+			}
+		#contactForm .btnArea{
+			width:277px;
+			clear:both;
+			margin-left:179px;
+			text-align:center;
+			}
+		#contactForm .btnArea input{
+			margin-left:10px;
+			}
+		#contactForm .btnArea input:first-child{
+			margin-left:0;
+			}
+		#contactForm dl dd p textarea{
+			width:276px;
+			height:66px;
+			margin-bottom:3px;
+			}
+		#contactForm .essential{
+			font-size:92%;
+			vertical-align:top;
+			margin-right:5px;
+			text-indent:-2.3em;
+			}
+		#contactForm .essential span{
+			font-size:92%;
+			vertical-align:top;
+			margin-right:5px;
+			}
+		#contactForm .supplementation{
+			font-size:84%;
+			vertical-align:top;
+			padding-bottom:3px;
+			}
+	
+	
+	
+	
+	
+	

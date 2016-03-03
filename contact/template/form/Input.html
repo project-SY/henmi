@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]><html class="ie7 oldie eosie" lang="ja"><![endif]-->
+<!--[if IE 8]><html class="ie8 oldie" lang="ja"><![endif]-->
+<!--[if gte IE 9]><!--><html lang="ja"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>CONTACT|HENMI PROMOTION</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="/common/css/base.css">
+<link rel="stylesheet" href="/common/css/layout.css">
+<!--[if lt IE 9]><script src="/common/js/libs/html5shiv.min.js"></script><![endif]-->
+<script src="/common/js/libs/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div id="container" class="gtheme-low">
+
+<header id="header">
+  <div class="header-group container-inner">
+    <div class="header-group__logo"><a href="/" title="HENMI PROMOTION">HENMI PROMOTION</a></div>
+    <nav class="header-group__gnav">
+      <ul>
+        <li class="nav01"><a href="/" title="TOP">TOP</a></li>
+        <li class="nav02"><a href="/#sec-management" title="MANAGEMENT">MANAGEMENT</a></li>
+        <li class="nav03"><a href="/#sec-business" title="BUSINESS">BUSINESS</a></li>
+        <li class="nav04"><a href="/#sec-audition" title="AUDITION">AUDITION</a></li>
+        <li class="nav05"><a href="/#sec-recruit" title="RECRUIT">RECRUIT</a></li>
+        <li class="nav06"><a href="/#sec-company" title="COMPANY">COMPANY</a></li>
+        <li class="nav07"><a href="/#sec-contact" title="CONTACT">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header><!--/#header-->
+
+<div id="content" class="theme-contact theme-form">
+
+  <section class="content-section">
+    <h1 class="content-section__ttl--main"><span>CONTACT</span></h1>
+    <div class="content-section-inner container-inner">
+      <div class="section-inner__desc">
+        <p>弊社へのお問い合わせは下記フォームから送信してください。 後日、担当部署よりご連絡をさせていただきます。<br />
+        お問い合わせの内容により、回答にお時間をいただく場合や、 回答できない場合がございますので予めご了承ください。<br />
+        ★印は必須項目です。</p>
+      </div>
+      <div class="section-inner__content">
+        <form action="{print $Frame/FormURI}/Review" method="post" enctype="multipart/form-data">
+          <div class="formbox form">
+            <div class="errorForm">
+              <!--{def $Form/Error}-->
+              入力内容を確認してください。<br>
+              <!--{loop $Form/Error/Messages}-->
+              {print $Form/Error/Messages/Message:HTML:BR}<br>
+              <!--{/loop}-->
+              <!--{/def}-->
+            </div>
+            <table>
+              <tr>
+                <th>会社名</th>
+                <td><div><input type="text" name="company" value="{print $Form/company/Value:HTML}" placeholder="例）株式会社エメダーナ" /></div></td>
+              </tr>
+              <tr>
+                <th>部署名</th>
+                <td><div><input type="text" name="post" value="{print $Form/post/Value:HTML}" placeholder="例）マネージメント事業部" /></div></td>
+              </tr>
+              <tr>
+                <th>氏名★</th>
+                <td><div><input type="text" name="fullname" value="{print $Form/fullname/Value:HTML}" placeholder="例）山田 花子" /></div></td>
+              </tr>
+              <tr>
+                <th>フリガナ★</th>
+                <td><div><input type="text" name="kananame" value="{print $Form/kananame/Value:HTML}" placeholder="例）ヤマダ ハナコ＜全角カナ＞" /></div></td>
+              </tr>
+              <tr>
+                <th>メールアドレス★</th>
+                <td><div><input type="text" name="email1" value="{print $Form/email1/Value:HTML}" placeholder="例）xxxxx@maridana.net＜半角英数＞" /></div><div><input type="text" name="email1_check" placeholder="確認のためもう一度入力してください。" value="{print $Form/email1_check/Value:HTML}"/></div></td>
+              </tr>
+              <tr>
+                <th>電話番号★</th>
+                <td><div><input type="text" name="tel" value="{print $Form/tel/Value:HTML}" placeholder="半角数字のみ＜ハイフンなし＞" /></div></td>
+              </tr>
+              <tr>
+                <th>郵便番号</th><td><div>
+                <input type="text" name="zip" value="{print $Form/zip/Value:HTML}" placeholder="半角数字のみ＜ハイフンなし＞" /></div></td>
+              </tr>
+              <tr>
+                <th>都道府県</th>
+                <td>
+                  <select name="address1">
+                    <option value="">選択してください</option>
+                    <option value="北海道" <!--{if $Form/address1/Value==北海道}-->selected<!--{/if}-->>北海道</option>
+                    <option value="青森県" <!--{if $Form/address1/Value==青森県}-->selected<!--{/if}-->>青森県</option>
+                    <option value="岩手県" <!--{if $Form/address1/Value==岩手県}-->selected<!--{/if}-->>岩手県</option>
+                    <option value="宮城県" <!--{if $Form/address1/Value==宮城県}-->selected<!--{/if}-->>宮城県</option>
+                    <option value="秋田県" <!--{if $Form/address1/Value==秋田県}-->selected<!--{/if}-->>秋田県</option>
+                    <option value="山形県" <!--{if $Form/address1/Value==山形県}-->selected<!--{/if}-->>山形県</option>
+                    <option value="福島県" <!--{if $Form/address1/Value==福島県}-->selected<!--{/if}-->>福島県</option>
+                    <option value="茨城県" <!--{if $Form/address1/Value==茨城県}-->selected<!--{/if}-->>茨城県</option>
+                    <option value="栃木県" <!--{if $Form/address1/Value==栃木県}-->selected<!--{/if}-->>栃木県</option>
+                    <option value="群馬県" <!--{if $Form/address1/Value==群馬県}-->selected<!--{/if}-->>群馬県</option>
+                    <option value="埼玉県" <!--{if $Form/address1/Value==埼玉県}-->selected<!--{/if}-->>埼玉県</option>
+                    <option value="千葉県" <!--{if $Form/address1/Value==千葉県}-->selected<!--{/if}-->>千葉県</option>
+                    <option value="東京都" <!--{if $Form/address1/Value==東京都}-->selected<!--{/if}-->>東京都</option>
+                    <option value="神奈川県" <!--{if $Form/address1/Value==神奈川県}-->selected<!--{/if}-->>神奈川県</option>
+                    <option value="新潟県" <!--{if $Form/address1/Value==新潟県}-->selected<!--{/if}-->>新潟県</option>
+                    <option value="富山県" <!--{if $Form/address1/Value==富山県}-->selected<!--{/if}-->>富山県</option>
+                    <option value="石川県" <!--{if $Form/address1/Value==石川県}-->selected<!--{/if}-->>石川県</option>
+                    <option value="福井県" <!--{if $Form/address1/Value==福井県}-->selected<!--{/if}-->>福井県</option>
+                    <option value="山梨県" <!--{if $Form/address1/Value==山梨県}-->selected<!--{/if}-->>山梨県</option>
+                    <option value="長野県" <!--{if $Form/address1/Value==長野県}-->selected<!--{/if}-->>長野県</option>
+                    <option value="岐阜県" <!--{if $Form/address1/Value==岐阜県}-->selected<!--{/if}-->>岐阜県</option>
+                    <option value="静岡県" <!--{if $Form/address1/Value==静岡県}-->selected<!--{/if}-->>静岡県</option>
+                    <option value="愛知県" <!--{if $Form/address1/Value==愛知県}-->selected<!--{/if}-->>愛知県</option>
+                    <option value="三重県" <!--{if $Form/address1/Value==三重県}-->selected<!--{/if}-->>三重県</option>
+                    <option value="滋賀県" <!--{if $Form/address1/Value==滋賀県}-->selected<!--{/if}-->>滋賀県</option>
+                    <option value="京都府" <!--{if $Form/address1/Value==京都府}-->selected<!--{/if}-->>京都府</option>
+                    <option value="大阪府" <!--{if $Form/address1/Value==大阪府}-->selected<!--{/if}-->>大阪府</option>
+                    <option value="兵庫県" <!--{if $Form/address1/Value==兵庫県}-->selected<!--{/if}-->>兵庫県</option>
+                    <option value="奈良県" <!--{if $Form/address1/Value==奈良県}-->selected<!--{/if}-->>奈良県</option>
+                    <option value="和歌山県" <!--{if $Form/address1/Value==和歌山県}-->selected<!--{/if}-->>和歌山県</option>
+                    <option value="鳥取県" <!--{if $Form/address1/Value==鳥取県}-->selected<!--{/if}-->>鳥取県</option>
+                    <option value="島根県" <!--{if $Form/address1/Value==島根県}-->selected<!--{/if}-->>島根県</option>
+                    <option value="岡山県" <!--{if $Form/address1/Value==岡山県}-->selected<!--{/if}-->>岡山県</option>
+                    <option value="広島県" <!--{if $Form/address1/Value==広島県}-->selected<!--{/if}-->>広島県</option>
+                    <option value="山口県" <!--{if $Form/address1/Value==山口県}-->selected<!--{/if}-->>山口県</option>
+                    <option value="香川県" <!--{if $Form/address1/Value==香川県}-->selected<!--{/if}-->>香川県</option>
+                    <option value="徳島県" <!--{if $Form/address1/Value==徳島県}-->selected<!--{/if}-->>徳島県</option>
+                    <option value="愛媛県" <!--{if $Form/address1/Value==愛媛県}-->selected<!--{/if}-->>愛媛県</option>
+                    <option value="高知県" <!--{if $Form/address1/Value==高知県}-->selected<!--{/if}-->>高知県</option>
+                    <option value="福岡県" <!--{if $Form/address1/Value==福岡県}-->selected<!--{/if}-->>福岡県</option>
+                    <option value="佐賀県" <!--{if $Form/address1/Value==佐賀県}-->selected<!--{/if}-->>佐賀県</option>
+                    <option value="長崎県" <!--{if $Form/address1/Value==長崎県}-->selected<!--{/if}-->>長崎県</option>
+                    <option value="熊本県" <!--{if $Form/address1/Value==熊本県}-->selected<!--{/if}-->>熊本県</option>
+                    <option value="大分県" <!--{if $Form/address1/Value==大分県}-->selected<!--{/if}-->>大分県</option>
+                    <option value="宮崎県" <!--{if $Form/address1/Value==宮崎県}-->selected<!--{/if}-->>宮崎県</option>
+                    <option value="鹿児島県" <!--{if $Form/address1/Value==鹿児島県}-->selected<!--{/if}-->>鹿児島県</option>
+                    <option value="沖縄県" <!--{if $Form/address1/Value==沖縄県}-->selected<!--{/if}-->>沖縄県</option>
+                  </select>
+
+                </td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td><div><input type="text" name="address2" placeholder="例）世田谷区太子堂4-7-4" value="{print $Form/address2/Value:HTML}"/></div><div><input type="text" name="address3" placeholder="例）セラピュアビル 4F" value="{print $Form/address3/Value:HTML}"/></div></td>
+              </tr>
+              <tr>
+                <th>お問い合わせ件名★</th>
+                <td><div>
+                  <select name="subject">
+                    <option value="">選択してください</option>
+                    <option value="仕事の依頼について" <!--{if $Form/subject/Value==仕事の依頼について}-->selected<!--{/if}-->>仕事の依頼について</option>
+                    <option value="タレント･アーティストの募集について" <!--{if $Form/subject/Value==タレント･アーティストの募集について}-->selected<!--{/if}-->>タレント･アーティストの募集について</option>
+                    <option value="リクルートについて" <!--{if $Form/subject/Value==リクルートについて}-->selected<!--{/if}-->>リクルートについて</option>
+                    <option value="その他" <!--{if $Form/subject/Value==その他}-->selected<!--{/if}-->>その他</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>お問い合わせ内容★</th>
+                <td><div><textarea name="request" placeholder="お問い合わせ内容をご入力下さい。" value="{print $Form/request/Value:HTML}">{print $Form/request/Value:HTML}</textarea></td>
+              </tr>
+            </table>
+          </div>
+          <div class="btnbox">
+            <ul>
+              <li><button class="next alp" type="submit" onClick="this.form.submit(); this.form.disabled=true;">入力した内容を確認する</button></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div><!--/.content-section-inner-->
+  </section><!--/.content-section-->
+
+</div><!--/#content-->
+
+<footer id="footer">
+  <div class="footer-group container-inner">
+    <div class="footer-group__copyright"><p>Copyright &copy; Henmi Promotion Inc. ALL RIGHTS RESERVED.</p></div>
+    <div class="footer-group__btn-pagetop"><a class="alp" href="#top">ページトップへ戻る</a></div>
+  </div>
+</footer><!--/#footer-->
+
+</div><!--/#container-->
+
+<!-- ========== SCRIPT ========== -->
+<script>
+$(function() {
+
+  var $el = {}, val = {};
+
+  function init() {
+
+    $el.select = $('select');
+    val.default = 'def';
+
+    setup();
+  }
+
+  function setup() {
+
+    $el.select.each(function(){
+      $(this).addClass(val.default);
+      $(this).children().eq(0).val(val.default);
+    });
+
+    main()
+  }
+
+  function main() {
+
+    $el.select.each(function(){
+      $(this).on({
+        change: function(){
+          if( $(this).val() == val.default ) {
+            $(this).addClass(val.default);
+          }else{
+            $(this).removeClass(val.default);
+          }
+        }
+      });
+    });
+
+  }
+
+  init();
+
+
+});
+</script>
+<!-- ========== /SCRIPT ========== -->
+
+</body>
+</html>
