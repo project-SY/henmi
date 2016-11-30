@@ -1306,7 +1306,7 @@ body {
 }
 
 .theme-manage .profbox__link .profbox__content li img {
-  width: 100%;
+  /*width: 100%;*/
   height: auto;
 }
 
@@ -1910,7 +1910,3 @@ body {
   color: #fff;
   background: url(../img/btn_next.png) left top no-repeat;
 }
-
-
-
-
